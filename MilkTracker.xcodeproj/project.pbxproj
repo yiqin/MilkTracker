@@ -14,6 +14,8 @@
 		8D7665941B0145A200B8BCAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7665931B0145A200B8BCAC /* Images.xcassets */; };
 		8D7665971B0145A200B8BCAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7665951B0145A200B8BCAC /* LaunchScreen.xib */; };
 		8D7665A31B0145A200B8BCAC /* MilkTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7665A21B0145A200B8BCAC /* MilkTrackerTests.swift */; };
+		8D7665AD1B01471200B8BCAC /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7665AC1B01471200B8BCAC /* Macro.swift */; };
+		9D2FA2E65767140379163FD0 /* libPods-MilkTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922174DD09EE8F98F235384B /* libPods-MilkTracker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18416716D5E11B8628A3973E /* Pods-MilkTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MilkTracker/Pods-MilkTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8D7665841B0145A200B8BCAC /* MilkTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7665881B0145A200B8BCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D7665891B0145A200B8BCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,10 @@
 		8D76659C1B0145A200B8BCAC /* MilkTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilkTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7665A11B0145A200B8BCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D7665A21B0145A200B8BCAC /* MilkTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkTrackerTests.swift; sourceTree = "<group>"; };
+		8D7665AC1B01471200B8BCAC /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		8D7665AE1B01472900B8BCAC /* MilkTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MilkTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F945616F63DDD8731379D9C /* Pods-MilkTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MilkTracker/Pods-MilkTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		922174DD09EE8F98F235384B /* libPods-MilkTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MilkTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2FA2E65767140379163FD0 /* libPods-MilkTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +66,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561C2D542E5D293FF60C1A36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F945616F63DDD8731379D9C /* Pods-MilkTracker.debug.xcconfig */,
+				18416716D5E11B8628A3973E /* Pods-MilkTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B138A57A9FAA8CE5CEEF4A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				922174DD09EE8F98F235384B /* libPods-MilkTracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D76657B1B0145A200B8BCAC = {
 			isa = PBXGroup;
 			children = (
 				8D7665861B0145A200B8BCAC /* MilkTracker */,
 				8D76659F1B0145A200B8BCAC /* MilkTrackerTests */,
 				8D7665851B0145A200B8BCAC /* Products */,
+				561C2D542E5D293FF60C1A36 /* Pods */,
+				8B138A57A9FAA8CE5CEEF4A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +107,14 @@
 			isa = PBXGroup;
 			children = (
 				8D7665891B0145A200B8BCAC /* AppDelegate.swift */,
+				8D7665AC1B01471200B8BCAC /* Macro.swift */,
 				8D76658E1B0145A200B8BCAC /* ViewController.swift */,
 				8D7665901B0145A200B8BCAC /* Main.storyboard */,
 				8D7665931B0145A200B8BCAC /* Images.xcassets */,
 				8D7665951B0145A200B8BCAC /* LaunchScreen.xib */,
 				8D76658B1B0145A200B8BCAC /* MilkTracker.xcdatamodeld */,
 				8D7665871B0145A200B8BCAC /* Supporting Files */,
+				8D7665AE1B01472900B8BCAC /* MilkTracker-Bridging-Header.h */,
 			);
 			path = MilkTracker;
 			sourceTree = "<group>";
@@ -122,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D7665A61B0145A200B8BCAC /* Build configuration list for PBXNativeTarget "MilkTracker" */;
 			buildPhases = (
+				82E8D25D27FA984C35F83DAD /* Check Pods Manifest.lock */,
 				8D7665801B0145A200B8BCAC /* Sources */,
 				8D7665811B0145A200B8BCAC /* Frameworks */,
 				8D7665821B0145A200B8BCAC /* Resources */,
+				7828C2B8CB9E9AC48ABF6A86 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,11 +241,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7828C2B8CB9E9AC48ABF6A86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MilkTracker/Pods-MilkTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E8D25D27FA984C35F83DAD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D7665801B0145A200B8BCAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7665AD1B01471200B8BCAC /* Macro.swift in Sources */,
 				8D76658F1B0145A200B8BCAC /* ViewController.swift in Sources */,
 				8D76658A1B0145A200B8BCAC /* AppDelegate.swift in Sources */,
 				8D76658D1B0145A200B8BCAC /* MilkTracker.xcdatamodeld in Sources */,
@@ -344,21 +409,28 @@
 		};
 		8D7665A71B0145A200B8BCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F945616F63DDD8731379D9C /* Pods-MilkTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MilkTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkTracker/MilkTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8D7665A81B0145A200B8BCAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18416716D5E11B8628A3973E /* Pods-MilkTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MilkTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MilkTracker/MilkTracker-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -415,6 +487,7 @@
 				8D7665A81B0145A200B8BCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D7665A91B0145A200B8BCAC /* Build configuration list for PBXNativeTarget "MilkTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +496,7 @@
 				8D7665AB1B0145A200B8BCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

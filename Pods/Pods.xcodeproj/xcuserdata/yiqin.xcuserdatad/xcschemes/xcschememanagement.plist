@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MilkTracker-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MilkTracker-FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MilkTracker-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MilkTracker-ParseUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MilkTracker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>063EF0C6A20398ADAD8B4331</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CF0250C768D459D0D9FCEB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>738A0FD8904192A797DEB89C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA87BBDFEDCA3729D3D0925B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F67DDBC02C0B2E1EB1CF5792</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

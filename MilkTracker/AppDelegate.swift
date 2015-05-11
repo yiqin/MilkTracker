@@ -17,7 +17,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupParse(launchOptions)
+        setAppNavigationBar()
+        
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
+        
+        launchMainViewController()
+        
         return true
+    }
+    
+    // MARK: launch the main tab bar controller
+    func launchMainViewController(){
+        let main = UIViewController()
+        self.window?.rootViewController = main
+    }
+    
+    // MARK: set the UI of navigation bar
+    func setAppNavigationBar(){
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor(red: 32.0/255, green: 32.0/255, blue: 32.0/255, alpha: 1.0)
+        
+        let navbarFont = UIFont(name: "OpenSans-Bold", size: 13.0) ?? UIFont.boldSystemFontOfSize(13)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName:UIColor(red: 255.0/255, green: 76.0/255, blue: 76.0/255, alpha: 1.0)]
+    }
+    
+    func setupParse(launchOptions: [NSObject: AnyObject]?){
+        Parse.setApplicationId("U2kLe1nx1bvEk9ITJC7iAi8zJ8TMVHphSaPKlC5k",
+            clientKey: "72DPteYU4KGeWko1gSJ1q0mjIl9ougkTt1DB5yip")
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
