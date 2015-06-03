@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA87BBDFEDCA3729D3D0925B"
+               BlueprintIdentifier = "D6C68AC27B5A846C2057D516"
                BuildableName = "libPods-MilkTracker.a"
                BlueprintName = "Pods-MilkTracker"
                ReferencedContainer = "container:Pods.xcodeproj">

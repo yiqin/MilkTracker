@@ -27,31 +27,30 @@
 // FBSDKCoreKit
 #define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit
 #define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit 4
-#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit 1
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit 2
 #define COCOAPODS_VERSION_PATCH_FBSDKCoreKit 0
 
 // FBSDKCoreKit/arc
 #define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit_arc
 #define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit_arc 4
-#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_arc 1
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_arc 2
 #define COCOAPODS_VERSION_PATCH_FBSDKCoreKit_arc 0
 
 // FBSDKCoreKit/no-arc
 #define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit_no_arc
 #define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit_no_arc 4
-#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_no_arc 1
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_no_arc 2
 #define COCOAPODS_VERSION_PATCH_FBSDKCoreKit_no_arc 0
 
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
-// This library does not follow semantic-versioning,
-// so we were not able to define version macros.
-// Please contact the author.
-// Version: 1.7.2.2.
+#define COCOAPODS_VERSION_MAJOR_Parse 1
+#define COCOAPODS_VERSION_MINOR_Parse 7
+#define COCOAPODS_VERSION_PATCH_Parse 4
 
 // ParseUI
 #define COCOAPODS_POD_AVAILABLE_ParseUI
 #define COCOAPODS_VERSION_MAJOR_ParseUI 1
 #define COCOAPODS_VERSION_MINOR_ParseUI 1
-#define COCOAPODS_VERSION_PATCH_ParseUI 3
+#define COCOAPODS_VERSION_PATCH_ParseUI 4
 
