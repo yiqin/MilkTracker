@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D719BB11B1FA04200CC6327 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D719BB01B1FA04200CC6327 /* Colors.swift */; };
 		8D719BB31B1FA3A500CC6327 /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D719BB21B1FA3A500CC6327 /* MainTabBarControllerViewController.swift */; };
+		8D719BB71B1FB66D00CC6327 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D719BB61B1FB66D00CC6327 /* DashboardViewController.m */; };
 		8D76658A1B0145A200B8BCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7665891B0145A200B8BCAC /* AppDelegate.swift */; };
 		8D76658D1B0145A200B8BCAC /* MilkTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D76658B1B0145A200B8BCAC /* MilkTracker.xcdatamodeld */; };
 		8D76658F1B0145A200B8BCAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76658E1B0145A200B8BCAC /* ViewController.swift */; };
@@ -34,6 +35,8 @@
 		18416716D5E11B8628A3973E /* Pods-MilkTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MilkTracker/Pods-MilkTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8D719BB01B1FA04200CC6327 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8D719BB21B1FA3A500CC6327 /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		8D719BB51B1FB66D00CC6327 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		8D719BB61B1FB66D00CC6327 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		8D7665841B0145A200B8BCAC /* MilkTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7665881B0145A200B8BCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D7665891B0145A200B8BCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				8D719BB01B1FA04200CC6327 /* Colors.swift */,
 				8D76658E1B0145A200B8BCAC /* ViewController.swift */,
 				8D719BB21B1FA3A500CC6327 /* MainTabBarControllerViewController.swift */,
+				8D719BB51B1FB66D00CC6327 /* DashboardViewController.h */,
+				8D719BB61B1FB66D00CC6327 /* DashboardViewController.m */,
 				8D7665901B0145A200B8BCAC /* Main.storyboard */,
 				8D7665931B0145A200B8BCAC /* Images.xcassets */,
 				8D7665951B0145A200B8BCAC /* LaunchScreen.xib */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7665AD1B01471200B8BCAC /* Macro.swift in Sources */,
+				8D719BB71B1FB66D00CC6327 /* DashboardViewController.m in Sources */,
 				8D719BB11B1FA04200CC6327 /* Colors.swift in Sources */,
 				8D76658F1B0145A200B8BCAC /* ViewController.swift in Sources */,
 				8D76658A1B0145A200B8BCAC /* AppDelegate.swift in Sources */,
