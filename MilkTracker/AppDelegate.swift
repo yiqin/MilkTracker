@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupParse(launchOptions)
         setAppNavigationBar()
         
-        
+        /*
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.makeKeyAndVisible()
         
         launchMainViewController()
-        
+        */
         return true
     }
     
@@ -39,11 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: set the UI of navigation bar
     func setAppNavigationBar(){
-        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().tintColor = UIColor(red: 32.0/255, green: 32.0/255, blue: 32.0/255, alpha: 1.0)
+        UINavigationBar.appearance().translucent = true
         
-        let navbarFont = UIFont(name: "OpenSans-Bold", size: 13.0) ?? UIFont.boldSystemFontOfSize(13)
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName:UIColor(red: 255.0/255, green: 76.0/255, blue: 76.0/255, alpha: 1.0)]
+        UINavigationBar.appearance().barTintColor = lightWhite //lightWhite//UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = lightBlue // UIColor(red: 32.0/255, green: 32.0/255, blue: 32.0/255, alpha: 1.0)
+        
+        let navbarFont = UIFont(name: "OpenSans-Bold", size: 15.0) ?? UIFont.boldSystemFontOfSize(15)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName:lightBlue]
     }
     
     func setupParse(launchOptions: [NSObject: AnyObject]?){
