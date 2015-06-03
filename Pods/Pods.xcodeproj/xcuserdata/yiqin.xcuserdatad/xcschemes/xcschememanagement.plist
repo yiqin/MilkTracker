@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MilkTracker-RWBarChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MilkTracker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4869A48427F841C1783911FA</key>
+		<key>3F7FD0BA27255B8F70EDE251</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50786B1AEDA4244C6027C040</key>
+		<key>463CC99E613DB0B2901E54DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C33050F8AED42DC1C8866E68</key>
+		<key>4E75F07DA5A51899DFE8AFC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7F79432D1B302440D70FF69</key>
+		<key>A939E53F2D7CB7CE3D43D434</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6C68AC27B5A846C2057D516</key>
+		<key>AD10D42C90ED0208804DDC9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F73C7223BCE03708C67C8327</key>
 		<dict>
 			<key>primary</key>
 			<true/>

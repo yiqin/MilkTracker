@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C33050F8AED42DC1C8866E68"
+               BlueprintIdentifier = "463CC99E613DB0B2901E54DB"
                BuildableName = "libPods-MilkTracker-Parse.a"
                BlueprintName = "Pods-MilkTracker-Parse"
                ReferencedContainer = "container:Pods.xcodeproj">

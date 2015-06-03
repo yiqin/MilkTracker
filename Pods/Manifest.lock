@@ -18,16 +18,19 @@ PODS:
     - Bolts/Tasks (>= 1.1.5)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+  - RWBarChartView (HEAD based on 1.2.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
   - Parse (~> 1.7.1)
   - ParseUI (~> 1.1.3)
+  - RWBarChartView (HEAD)
 
 SPEC CHECKSUMS:
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
   FBSDKCoreKit: 84b3616a361801f190e43a9909caead7bb6087c7
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  RWBarChartView: d5dc5ec3358d7c769e46d39d848621717d43abb2
 
 COCOAPODS: 0.37.2
