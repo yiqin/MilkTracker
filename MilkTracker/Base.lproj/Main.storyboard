@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="2004" y="1065"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Dashboard-->
         <scene sceneID="ioi-JK-MSp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bvd-ty-N4k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="pE1-ST-OJT"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="ic_equalizer" id="pE1-ST-OJT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggU-Tf-qf4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -81,11 +81,11 @@
             </objects>
             <point key="canvasLocation" x="1192" y="311"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Sources-->
         <scene sceneID="eZ5-Xm-xlR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OKv-wZ-9lq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="eig-a0-WRF"/>
+                    <tabBarItem key="tabBarItem" title="Sources" image="ic_assignment_returned" id="eig-a0-WRF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vlY-H0-J3u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -140,6 +140,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_assignment_returned" width="24" height="24"/>
+        <image name="ic_equalizer" width="24" height="24"/>
         <image name="ic_person" width="24" height="24"/>
     </resources>
 </document>
