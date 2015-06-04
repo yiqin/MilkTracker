@@ -21,6 +21,7 @@
 		8D9BBE741B200AF20060B51B /* ParseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BBE731B200AF20060B51B /* ParseDataManager.swift */; };
 		8D9BBE7C1B2012310060B51B /* NSParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BBE7B1B2012310060B51B /* NSParseObject.swift */; };
 		8D9BBE7E1B2012630060B51B /* MilkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BBE7D1B2012630060B51B /* MilkData.swift */; };
+		8D9BBE801B201BEF0060B51B /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BBE7F1B201BEF0060B51B /* ScrollViewContainer.swift */; };
 		9D2FA2E65767140379163FD0 /* libPods-MilkTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922174DD09EE8F98F235384B /* libPods-MilkTracker.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		8D9BBE731B200AF20060B51B /* ParseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataManager.swift; sourceTree = "<group>"; };
 		8D9BBE7B1B2012310060B51B /* NSParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSParseObject.swift; sourceTree = "<group>"; };
 		8D9BBE7D1B2012630060B51B /* MilkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkData.swift; sourceTree = "<group>"; };
+		8D9BBE7F1B201BEF0060B51B /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 		8F945616F63DDD8731379D9C /* Pods-MilkTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilkTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MilkTracker/Pods-MilkTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		922174DD09EE8F98F235384B /* libPods-MilkTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MilkTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				8D719BB21B1FA3A500CC6327 /* MainTabBarControllerViewController.swift */,
 				8D719BB51B1FB66D00CC6327 /* DashboardViewController.h */,
 				8D719BB61B1FB66D00CC6327 /* DashboardViewController.m */,
+				8D9BBE7F1B201BEF0060B51B /* ScrollViewContainer.swift */,
 				8D9BBE7B1B2012310060B51B /* NSParseObject.swift */,
 				8D9BBE7D1B2012630060B51B /* MilkData.swift */,
 				8D9BBE731B200AF20060B51B /* ParseDataManager.swift */,
@@ -309,6 +312,7 @@
 				8D76658D1B0145A200B8BCAC /* MilkTracker.xcdatamodeld in Sources */,
 				8D9BBE7E1B2012630060B51B /* MilkData.swift in Sources */,
 				8D719BB31B1FA3A500CC6327 /* MainTabBarControllerViewController.swift in Sources */,
+				8D9BBE801B201BEF0060B51B /* ScrollViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

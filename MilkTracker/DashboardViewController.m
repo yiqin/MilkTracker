@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) RWBarChartView *singleChartView;
 
+@property (nonatomic, strong) ScrollViewContainer *scrollViewController;
+
 @property (nonatomic, strong) NSIndexPath *indexPathToScroll;
 
 @end
@@ -52,12 +54,14 @@
     self.singleChartView.barWidth = 15;
     
     self.singleChartView.alwaysBounceHorizontal = YES;
-    
     self.singleChartView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1];
     
-    [self.view addSubview:self.singleChartView];
-    
     self.singleChartView.scrollViewDelegate = self;
+    
+    self.scrollViewController = [[ScrollViewContainer alloc] init];
+    self.scrollViewController.scrollView = self.singleChartView;
+    [self.scrollViewController addSubview:self.singleChartView];
+    [self.view addSubview:self.scrollViewController];
 }
 
 - (void)viewDidLoad
@@ -89,7 +93,7 @@
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:j];
             
             // signle-segment item
-            CGFloat ratio = milkData.value/100;
+            CGFloat ratio = milkData.value/100.0;
             if (ratio > 1) {
                 ratio = 1;
             }
@@ -203,12 +207,13 @@
     
     CGFloat padding = 20;
     CGFloat height = (self.view.bounds.size.height - [self.topLayoutGuide length] - padding) / 2;
-    CGRect rect = CGRectMake(0, [self.topLayoutGuide length]+20, self.view.bounds.size.width, height);
+    CGRect rect = CGRectMake(0, [self.topLayoutGuide length], self.view.bounds.size.width, height);
     self.singleChartView.frame = rect;
     
     rect.origin.y = CGRectGetMaxY(rect) + padding;
     
     
+    self.scrollViewController.frame = CGRectMake(0, [self.topLayoutGuide length], self.view.bounds.size.width, self.view.bounds.size.height - [self.topLayoutGuide length]);
 }
 
 - (NSInteger)numberOfSectionsInBarChartView:(RWBarChartView *)barChartView

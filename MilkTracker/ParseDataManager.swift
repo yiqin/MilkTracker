@@ -29,7 +29,9 @@ class ParseDataManager: NSObject {
     
         let query = PFQuery(className: "MilkValue")
         
-        query.orderByDescending("createdAt")
+        query.orderByAscending("createdAt")
+        
+        query.limit = 1000
     
     
         // query.limit = trendingObjectsPerPage
