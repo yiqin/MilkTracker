@@ -8,6 +8,7 @@
 
 #import "DashboardViewController.h"
 #import "RWBarChartView.h"
+#import <MilkTracker-Swift.h>
 
 @interface DashboardViewController () <RWBarChartViewDataSource, UIScrollViewDelegate>
 
@@ -63,12 +64,91 @@
 {
     [super viewDidLoad];
     
+    self.itemCounts = [[NSArray alloc] init];
+    self.singleItems = [[NSDictionary alloc] init];
+    
+    
+    // Load data...
+    [ParseDataManager loadDataFromParse:0 completionClosure:^(BOOL success, BOOL hasMore, NSArray *objects) {
+        
+        NSMutableArray *itemCounts = [NSMutableArray array];
+        NSMutableDictionary *singleItems = [NSMutableDictionary dictionary];
+        
+        
+        [itemCounts addObject:@(objects.count)];
+        
+        
+        for (NSInteger i = 0 ; i < objects.count; i++) {
+            
+            
+            PFObject *object = [objects objectAtIndex:i];
+            
+            MilkData *milkData = [[MilkData alloc] initWithParseObject:object];
+
+            NSInteger j = 0;
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:j];
+            
+            // signle-segment item
+            CGFloat ratio = milkData.value/100;
+            if (ratio > 1) {
+                ratio = 1;
+            }
+            if (ratio == 0) {
+                ratio = (CGFloat)(random() % 10) / 1000.0;
+            }
+            
+            // ratio = (CGFloat)(random() % 1000) / 1000.0;
+            
+            UIColor *color = nil;
+            if (ratio < 0.25)
+            {
+                color = [UIColor colorWithRed:0.5 green:0.5 blue:1.0 alpha:1.0];
+            }
+            else if (ratio < 0.5)
+            {
+                color = [UIColor colorWithRed:0.5 green:1.0 blue:0.5 alpha:1.0];
+            }
+            else if (ratio < 0.75)
+            {
+                color = [UIColor yellowColor];
+            }
+            else
+            {
+                color = [UIColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
+            }
+            
+            RWBarChartItem *singleItem = [RWBarChartItem itemWithSingleSegmentOfRatio:ratio color:color];
+            singleItem.text = [NSString stringWithFormat:@"Milk %ld-%ld: %0.2f", (long)indexPath.section, (long)indexPath.item, ratio];
+            
+            NSLog(@"%@", singleItem.text);
+            
+            singleItems[indexPath] = singleItem;
+            
+        }
+            
+        self.itemCounts = itemCounts;
+        self.singleItems = singleItems;
+        
+        
+        NSLog(@"%@", self.itemCounts);
+        
+        [self updateScrollButton];
+        
+        [self.singleChartView reloadData];
+        
+        // [self createChartWithData];
+    }];
+    
+}
+
+
+- (void)createChartWithData {
     NSMutableArray *itemCounts = [NSMutableArray array];
     NSMutableDictionary *singleItems = [NSMutableDictionary dictionary];
     
     // make sample values
     // section loop
-    for (NSInteger isec = 0; isec < 5; ++isec)
+    for (NSInteger isec = 0; isec < 1; ++isec)
     {
         NSInteger n = 10;
         [itemCounts addObject:@(n)];
@@ -101,6 +181,8 @@
                 RWBarChartItem *singleItem = [RWBarChartItem itemWithSingleSegmentOfRatio:ratio color:color];
                 singleItem.text = [NSString stringWithFormat:@"Milk %ld-%ld: %0.2f", (long)indexPath.section, (long)indexPath.item, ratio];
                 singleItems[indexPath] = singleItem;
+                
+                NSLog(@"%@", singleItem.text);
             }
         }
     }
@@ -109,8 +191,11 @@
     self.singleItems = singleItems;
     
     
+    [self.singleChartView reloadData];
     [self updateScrollButton];
+    
 }
+
 
 - (void)viewWillLayoutSubviews
 {
@@ -123,7 +208,7 @@
     
     rect.origin.y = CGRectGetMaxY(rect) + padding;
     
-    [self.singleChartView reloadData];
+    
 }
 
 - (NSInteger)numberOfSectionsInBarChartView:(RWBarChartView *)barChartView
