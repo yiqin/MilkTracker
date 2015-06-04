@@ -118,7 +118,7 @@
     
     CGFloat padding = 20;
     CGFloat height = (self.view.bounds.size.height - [self.topLayoutGuide length] - padding) / 2;
-    CGRect rect = CGRectMake(0, [self.topLayoutGuide length], self.view.bounds.size.width, height);
+    CGRect rect = CGRectMake(0, [self.topLayoutGuide length]+20, self.view.bounds.size.width, height);
     self.singleChartView.frame = rect;
     
     rect.origin.y = CGRectGetMaxY(rect) + padding;
