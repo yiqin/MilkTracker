@@ -78,57 +78,78 @@
         NSMutableArray *itemCounts = [NSMutableArray array];
         NSMutableDictionary *singleItems = [NSMutableDictionary dictionary];
         
-        
-        [itemCounts addObject:@(objects.count)];
-        
-        
-        for (NSInteger i = 0 ; i < objects.count; i++) {
+        // We only return 1000 data set back first.
+        int pointer = 0;
+        for (NSInteger j = 0; j < 4; j++) {
             
+            [itemCounts addObject:@(48)];
             
-            PFObject *object = [objects objectAtIndex:i];
-            
-            MilkData *milkData = [[MilkData alloc] initWithParseObject:object];
-
-            NSInteger j = 0;
-            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:j];
-            
-            // signle-segment item
-            CGFloat ratio = milkData.value/100.0;
-            if (ratio > 1) {
-                ratio = 1;
+            for (NSInteger i = 0 ; i < 48; i++) {
+                
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:j];
+                
+                CGFloat sumRatio = 0;
+                for (int k = 0; k < 5; k++) {
+                    PFObject *object = [objects objectAtIndex:pointer];
+                    pointer++;
+                    MilkData *milkData = [[MilkData alloc] initWithParseObject:object];
+                    
+                    CGFloat ratio = milkData.value/1300.0;
+                    sumRatio = sumRatio+ratio;
+                }
+                
+                
+                CGFloat ratio = sumRatio/5;
+                
+                if (ratio > 1) {
+                    ratio = 1;
+                }
+                if (ratio == 0) {
+                    ratio = (CGFloat)(random() % 10) / 1000.0;
+                }
+                
+                
+                // define color based on the ratio.
+                
+                
+                UIColor *color = nil;
+                if (ratio < 0.25)
+                {
+                    color = [UIColor colorWithRed:0.5 green:0.5 blue:1.0 alpha:1.0];
+                }
+                else if (ratio < 0.5)
+                {
+                    color = [UIColor colorWithRed:0.5 green:1.0 blue:0.5 alpha:1.0];
+                }
+                else if (ratio < 0.75)
+                {
+                    color = [UIColor yellowColor];
+                }
+                else
+                {
+                    color = [UIColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
+                }
+                
+                RWBarChartItem *singleItem = [RWBarChartItem itemWithSingleSegmentOfRatio:ratio color:color];
+                
+                NSString *min = @"00";
+                if (((long)indexPath.item+1)%2 == 0){
+                    
+                }else {
+                    min = @"30";
+                }
+                
+                
+                singleItem.text = [NSString stringWithFormat:@"Time %ld:%@, Milk: %0.2f", ((long)indexPath.item+1)/2, min, ratio];
+                
+                NSLog(@"%@", singleItem.text);
+                
+                singleItems[indexPath] = singleItem;
+                
             }
-            if (ratio == 0) {
-                ratio = (CGFloat)(random() % 10) / 1000.0;
-            }
-            
-            // ratio = (CGFloat)(random() % 1000) / 1000.0;
-            
-            UIColor *color = nil;
-            if (ratio < 0.25)
-            {
-                color = [UIColor colorWithRed:0.5 green:0.5 blue:1.0 alpha:1.0];
-            }
-            else if (ratio < 0.5)
-            {
-                color = [UIColor colorWithRed:0.5 green:1.0 blue:0.5 alpha:1.0];
-            }
-            else if (ratio < 0.75)
-            {
-                color = [UIColor yellowColor];
-            }
-            else
-            {
-                color = [UIColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
-            }
-            
-            RWBarChartItem *singleItem = [RWBarChartItem itemWithSingleSegmentOfRatio:ratio color:color];
-            singleItem.text = [NSString stringWithFormat:@"Milk %ld-%ld: %0.2f", (long)indexPath.section, (long)indexPath.item, ratio];
-            
-            NSLog(@"%@", singleItem.text);
-            
-            singleItems[indexPath] = singleItem;
-            
         }
+        
+
             
         self.itemCounts = itemCounts;
         self.singleItems = singleItems;
@@ -183,7 +204,7 @@
                 }
                 
                 RWBarChartItem *singleItem = [RWBarChartItem itemWithSingleSegmentOfRatio:ratio color:color];
-                singleItem.text = [NSString stringWithFormat:@"Milk %ld-%ld: %0.2f", (long)indexPath.section, (long)indexPath.item, ratio];
+                singleItem.text = [NSString stringWithFormat:@"Milk %ld-%ld: %0.2f", (long)indexPath.section+1, (long)indexPath.item+1, ratio];
                 singleItems[indexPath] = singleItem;
                 
                 NSLog(@"%@", singleItem.text);
@@ -242,8 +263,8 @@
 
 - (NSString *)barChartView:(RWBarChartView *)barChartView titleForSection:(NSInteger)section
 {
-    NSString *prefix = (barChartView == self.singleChartView ? @"Section" : @"Section");
-    return [prefix stringByAppendingFormat:@" %ld", (long)section];
+    NSString *prefix = (barChartView == self.singleChartView ? @"Day" : @"Section");
+    return [prefix stringByAppendingFormat:@" %ld", (long)section+1];
 }
 
 - (BOOL)shouldShowItemTextForBarChartView:(RWBarChartView *)barChartView

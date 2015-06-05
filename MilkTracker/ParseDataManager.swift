@@ -29,7 +29,7 @@ class ParseDataManager: NSObject {
     
         let query = PFQuery(className: "MilkValue")
         
-        query.orderByAscending("createdAt")
+        query.orderByDescending("createdAt")
         
         query.limit = 1000
     
