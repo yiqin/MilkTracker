@@ -172,22 +172,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:  26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVg-yo-jYI">
-                                <rect key="frame" x="39" y="286" width="79" height="21"/>
+                                <rect key="frame" x="39" y="286" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight: 0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-6z-ng9">
                                 <rect key="frame" x="39" y="315" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned, and more features are coming." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-NK-Qt3">
-                                <rect key="frame" x="137" y="495" width="327" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Q90-cZ-f8Y"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -203,8 +194,6 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dqH-3T-C6R" secondAttribute="centerX" id="6pp-0S-Rve"/>
                             <constraint firstItem="dqH-3T-C6R" firstAttribute="top" secondItem="XdM-Pe-Yig" secondAttribute="bottom" constant="30" id="jog-4O-ixY"/>
-                            <constraint firstAttribute="centerX" secondItem="Wdh-NK-Qt3" secondAttribute="centerX" id="vAo-is-HNv"/>
-                            <constraint firstItem="JOi-8X-BAq" firstAttribute="top" secondItem="Wdh-NK-Qt3" secondAttribute="bottom" constant="35" id="yVJ-gj-Hbn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="S37-t8-5tJ"/>

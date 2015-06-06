@@ -79,7 +79,7 @@
         NSMutableDictionary *singleItems = [NSMutableDictionary dictionary];
         
         // We only return 1000 data set back first.
-        int pointer = 0;
+        int pointer = (int) objects.count-1;
         for (NSInteger j = 0; j < 4; j++) {
             
             [itemCounts addObject:@(48)];
@@ -91,10 +91,10 @@
                 CGFloat sumRatio = 0;
                 for (int k = 0; k < 5; k++) {
                     PFObject *object = [objects objectAtIndex:pointer];
-                    pointer++;
+                    pointer--;
                     MilkData *milkData = [[MilkData alloc] initWithParseObject:object];
                     
-                    CGFloat ratio = milkData.value/1300.0;
+                    CGFloat ratio = milkData.value/2300.0;
                     sumRatio = sumRatio+ratio;
                 }
                 
