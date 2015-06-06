@@ -59,37 +59,54 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As devices request permission to update your data, they will be added to the list" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsA-Il-7x2">
                                 <rect key="frame" x="16" y="72" width="568" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="KqL-EG-65D"/>
+                                    <constraint firstAttribute="height" constant="55" id="amD-4S-Hbn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-eo-Kq6">
+                                <rect key="frame" x="51" y="173" width="498" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="BpD-B0-4bM"/>
+                                    <constraint firstAttribute="height" constant="246" id="puu-me-eeZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="puu-me-eeZ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-9k-Fes">
                                 <rect key="frame" x="16" y="129" width="568" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3ld-aC-Fho"/>
+                                    <constraint firstAttribute="height" constant="30" id="GUd-wA-rcl"/>
                                 </constraints>
                                 <state key="normal" title="Milk Tracker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-eo-Kq6">
-                                <rect key="frame" x="16" y="179" width="276" height="157"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-Gu-d5f">
-                                <rect key="frame" x="308" y="179" width="276" height="157"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XsA-Il-7x2" firstAttribute="top" secondItem="Nwm-um-Vee" secondAttribute="bottom" constant="8" id="TVj-ch-3vG"/>
-                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="TXq-Zz-55G"/>
-                            <constraint firstItem="XsA-Il-7x2" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="WMC-ex-A4t"/>
-                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="top" secondItem="XsA-Il-7x2" secondAttribute="bottom" constant="2" id="akV-4k-hoA"/>
-                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="q61-kh-d1I"/>
-                            <constraint firstItem="XsA-Il-7x2" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="xWP-bL-Al6"/>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="top" secondItem="Nwm-um-Vee" secondAttribute="bottom" constant="8" id="0Wn-Jr-EAq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CM2-eo-Kq6" secondAttribute="trailing" constant="35" id="2yJ-bz-nks"/>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="7M7-HE-aYJ"/>
+                            <constraint firstItem="CM2-eo-Kq6" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" constant="35" id="DEi-eK-nRi"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="Jc6-xr-bg1"/>
+                            <constraint firstItem="CM2-eo-Kq6" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" constant="35" id="Mvh-zl-uVq"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="QlA-Eh-oLE"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="top" secondItem="XsA-Il-7x2" secondAttribute="bottom" constant="2" id="dgA-Di-fNP"/>
+                            <constraint firstItem="CM2-eo-Kq6" firstAttribute="top" secondItem="y6Q-9k-Fes" secondAttribute="bottom" constant="14" id="gF6-AV-G4F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CM2-eo-Kq6" secondAttribute="trailing" constant="35" id="h5V-sY-LXA"/>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="uLN-Lq-Hv9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DEi-eK-nRi"/>
+                                <exclude reference="h5V-sY-LXA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sources" id="OmW-0C-ajY"/>
                 </viewController>
@@ -198,7 +215,6 @@
     </scenes>
     <resources>
         <image name="Image-1" width="3264" height="2448"/>
-        <image name="Image-2" width="3264" height="2448"/>
         <image name="ic_assignment_returned" width="24" height="24"/>
         <image name="ic_equalizer" width="24" height="24"/>
         <image name="ic_person" width="24" height="24"/>
