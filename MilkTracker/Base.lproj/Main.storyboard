@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Lj-y4-caM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Dashboard-->
@@ -55,14 +56,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milk Track:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsA-Il-7x2">
-                                <rect key="frame" x="36" y="115" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As devices request permission to update your data, they will be added to the list" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsA-Il-7x2">
+                                <rect key="frame" x="16" y="72" width="568" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="KqL-EG-65D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-9k-Fes">
+                                <rect key="frame" x="16" y="129" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3ld-aC-Fho"/>
+                                </constraints>
+                                <state key="normal" title="Milk Tracker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-eo-Kq6">
+                                <rect key="frame" x="16" y="179" width="276" height="157"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-Gu-d5f">
+                                <rect key="frame" x="308" y="179" width="276" height="157"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="top" secondItem="Nwm-um-Vee" secondAttribute="bottom" constant="8" id="TVj-ch-3vG"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="TXq-Zz-55G"/>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="WMC-ex-A4t"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="top" secondItem="XsA-Il-7x2" secondAttribute="bottom" constant="2" id="akV-4k-hoA"/>
+                            <constraint firstItem="y6Q-9k-Fes" firstAttribute="leading" secondItem="fRv-Iq-0az" secondAttribute="leadingMargin" id="q61-kh-d1I"/>
+                            <constraint firstItem="XsA-Il-7x2" firstAttribute="trailing" secondItem="fRv-Iq-0az" secondAttribute="trailingMargin" id="xWP-bL-Al6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sources" id="OmW-0C-ajY"/>
                 </viewController>
@@ -111,7 +138,7 @@
         <!--Me-->
         <scene sceneID="6O2-6G-s4A">
             <objects>
-                <viewController id="EM1-j2-0hV" sceneMemberID="viewController">
+                <viewController id="EM1-j2-0hV" customClass="ProfileViewController" customModule="MilkTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XdM-Pe-Yig"/>
                         <viewControllerLayoutGuide type="bottom" id="JOi-8X-BAq"/>
@@ -120,13 +147,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-3T-C6R">
-                                <rect key="frame" x="240" y="128" width="120" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-3T-C6R">
+                                <rect key="frame" x="240" y="94" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="XIg-ad-jhe"/>
+                                    <constraint firstAttribute="height" constant="120" id="Xi7-NH-DEt"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx4-Fu-cnW">
+                                <rect key="frame" x="44" y="257" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dqH-3T-C6R" secondAttribute="centerX" id="6pp-0S-Rve"/>
+                            <constraint firstItem="dqH-3T-C6R" firstAttribute="top" secondItem="XdM-Pe-Yig" secondAttribute="bottom" constant="30" id="jog-4O-ixY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="S37-t8-5tJ"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="dqH-3T-C6R" id="5Im-yY-GTH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFW-En-b0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,8 +197,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image-1" width="3264" height="2448"/>
+        <image name="Image-2" width="3264" height="2448"/>
         <image name="ic_assignment_returned" width="24" height="24"/>
         <image name="ic_equalizer" width="24" height="24"/>
         <image name="ic_person" width="24" height="24"/>
+        <image name="profileImage" width="150" height="205"/>
     </resources>
 </document>
