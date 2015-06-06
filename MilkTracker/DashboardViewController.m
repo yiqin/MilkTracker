@@ -140,7 +140,7 @@
                 }
                 
                 
-                singleItem.text = [NSString stringWithFormat:@"Time %ld:%@, Milk: %0.2f", ((long)indexPath.item+1)/2, min, ratio];
+                singleItem.text = [NSString stringWithFormat:@"Time: %ld:%@, Milk: %0.2f", ((long)indexPath.item+1)/2, min, ratio];
                 
                 NSLog(@"%@", singleItem.text);
                 
