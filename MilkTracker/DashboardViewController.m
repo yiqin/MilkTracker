@@ -105,7 +105,7 @@
                     ratio = 1;
                 }
                 if (ratio == 0) {
-                    ratio = (CGFloat)(random() % 10) / 1000.0;
+                    ratio = (CGFloat)(random() % 10) / 10000.0;
                 }
                 
                 
